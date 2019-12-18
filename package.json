@@ -1,0 +1,30 @@
+{
+  "name": "DiscordBot-JS",
+  "version": "1.0.0",
+  "description": "Discord bot in javascript with reddit and twitter api integrations",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "nodemon bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alantking/DiscordBot-JS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alantking/DiscordBot-JS/issues"
+  },
+  "homepage": "https://github.com/alantking/DiscordBot-JS#readme",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.2.0",
+    "snoowrap": "^1.20.1",
+    "twit": "^2.2.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
