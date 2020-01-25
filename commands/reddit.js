@@ -8,7 +8,6 @@ const r = new snoowrap({
     refreshToken: rconfig.refreshToken
 });
 var sub = /^(!reddit )([a-z0-9])+/i
-var rdm = Math.floor((Math.random() * 25))
 
 module.exports = (message) => {
     if (message.content.match(sub)) {
@@ -16,9 +15,10 @@ module.exports = (message) => {
             scrapeSubreddit();
 
             async function scrapeSubreddit() {
+                var rdm = Math.floor((Math.random() * 25))
                 var subreddit = await r.getSubreddit(sub.exec(message)[0].substr(8));
                 var topPosts = await subreddit.getTop({ time: 'week', limit: (rdm + 1) });
-                message.channel.send('https://reddit.com/'.concat(topPosts[rdm].permalink))
+                message.channel.send('https://reddit.com'.concat(topPosts[rdm].permalink))
             };
         }
         catch (error) {
